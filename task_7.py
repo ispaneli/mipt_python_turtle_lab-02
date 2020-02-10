@@ -13,10 +13,7 @@ def draw_spiral(size, coef=0):
 
 if __name__ == '__main__':
     turtle.shape('turtle')
-
     time.sleep(1)
 
-    n = int(input('Введите длину спирали в оборотах: '))
-    draw_spiral(n)
-
+    draw_spiral(10)
     time.sleep(1)

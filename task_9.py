@@ -3,6 +3,15 @@ import time
 from math import *
 
 
+def draw_encapsulation(num: 'кол-во фигур, int, >0'):
+    for i in range(num):
+        turtle.penup()
+        turtle.goto(get_radius(3 + i), 0)
+        turtle.pendown()
+
+        draw_correct_figure(3 + i)
+
+
 def draw_correct_figure(size):
     angle = (size - 2) * 180 / size
     a = 60 * size / 4
@@ -23,14 +32,7 @@ def get_radius(size):
 
 if __name__ == '__main__':
     turtle.shape('turtle')
-
     time.sleep(1)
 
-    for i in range(3, 13):
-        turtle.penup()
-        turtle.goto(get_radius(i), 0)
-        turtle.pendown()
-
-        draw_correct_figure(i)
-
-    time.sleep(3)
+    draw_encapsulation(2)
+    time.sleep(1)
